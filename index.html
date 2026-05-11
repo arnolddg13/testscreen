@@ -1,0 +1,102 @@
+<div class="led-board">
+
+  <!-- TRADINGVIEW LIVE STREAM -->
+  <div class="ticker">
+
+        <!-- TradingView Widget -->
+    <div class="item" style="flex:1;">
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
+<style>
+
+body{
+    margin:0;
+    background:#000;
+    overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ⬆️ BIGGER BOARD HEIGHT */
+.led-board{
+    width:100vw;
+    height:180px;   /* was 120px */
+    background:#000;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    border-top:3px solid #111;
+    border-bottom:3px solid #111;
+}
+
+/* ⬆️ slower + smoother feel for big screens */
+.ticker{
+    display:inline-block;
+    white-space:nowrap;
+    padding-left:100%;
+    animation:scroll 55s linear infinite;
+}
+
+.item{
+    display:inline-flex;
+    align-items:center;
+    margin-right:140px;  /* more spacing */
+    font-size:64px;      /* 🔥 BIG TEXT */
+    font-weight:900;
+}
+
+/* ⬆️ bigger icons */
+.logo{
+    width:70px;
+    height:70px;
+    margin-right:20px;
+    border-radius:50%;
+    background:#111;
+}
+
+.symbol{
+    color:#ffffff;
+    margin-right:18px;
+    letter-spacing:1px;
+}
+
+/* price styling bigger */
+.price-up{
+    color:#00ff66;
+}
+
+.price-down{
+    color:#ff3333;
+}
+
+/* smoother scroll */
+@keyframes scroll{
+0%{
+    transform:translateX(0);
+}
+100%{
+    transform:translateX(-100%);
+}
+}
+
+</style>
+      {
+        "symbols": [
+          {"proName": "OANDA:XAUUSD", "title": "GOLD"},
+          {"proName": "OANDA:XAGUSD", "title": "SILVER"},
+          {"proName": "BINANCE:BTCUSDT", "title": "BTC"},
+          {"proName": "FX:EURUSD", "title": "EUR/USD"},
+          {"proName": "FX:GBPUSD", "title": "GBP/USD"},
+          {"proName": "FX:USDJPY", "title": "USD/JPY"},
+          {"proName": "TVC:USOIL", "title": "OIL"}
+        ],
+        "showSymbolLogo": true,
+        "isTransparent": true,
+        "displayMode": "regular",
+        "colorTheme": "dark",
+        "locale": "en"
+      }
+      </script>
+    </div>
+
+  </div>
+
+</div>
